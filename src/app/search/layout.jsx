@@ -1,7 +1,7 @@
-import Footer from '@/components/Footer'
-import './globals.css'
+
 import { Inter } from 'next/font/google'
 import { Poppins } from 'next/font/google'
+import SearchHeader from '@/components/SearchHeader'
 
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] })
@@ -14,13 +14,13 @@ export const metadata = {
   }
 }
 
-export default function RootLayout({ children }) {
+export default function SearchLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>
+    
+      <div className={poppins.className}>
+        <SearchHeader/>
         {children}
-        <Footer/>
-        </body>
-    </html>
+        </div>
+   
   )
 }
